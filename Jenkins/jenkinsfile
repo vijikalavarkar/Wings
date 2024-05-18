@@ -1,0 +1,35 @@
+pipeline{
+    agent{
+        label 'dev'
+    }
+    stages{
+        stage('hostname'){
+            steps{
+                sh '''
+                    hostname
+                '''
+            }
+        }
+        stage('Server-Details'){
+            steps{
+                sh '''
+                    uname -a
+                '''
+            }
+        }
+        stage('Memory'){
+            steps{
+                sh '''
+                    free -h
+                '''
+            }
+        }
+        stage('Disk-Utilization'){
+            steps{
+                sh '''
+                    df -kh
+                '''
+            }
+        }
+    }
+}
