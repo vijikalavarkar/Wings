@@ -1,2 +1,2 @@
-# Wings - Developers
+# Wings - Jenkins Direcory
 
